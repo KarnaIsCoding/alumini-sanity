@@ -1,37 +1,27 @@
 import { defineField, defineType } from 'sanity'
 
 export default defineType({
-  name: 'studentcorner',
-  title: 'Student Corner',
+  name: 'jobs',
+  title: 'Jobs',
   type: 'document',
   fields: [
-    defineField({
-        name: 'type',
-        title: 'Type',
-        type: 'string',
-        options: {
-          list: ['Student Training', 'Past Competition', 'Clubs'],
-          layout: 'radio',
-        },
-        description: 'Type of community content.',
-      }),
     defineField({
       name: 'title',
       title: 'Title',
       type: 'string',
-      description: 'Title of the Field.',
+      description: 'Title of the Job.',
     }),
     defineField({
       name: 'description',
       title: 'Description',
       type: 'text',
-      description: 'A detailed description of the Field.',
+      description: 'A detailed description of the Job Posting.',
     }),
     defineField({
       name: 'date',
       title: 'Date',
       type: 'datetime',
-      description: 'Event or program date.',
+      description: 'Interview date.',
     }),
     defineField({
       name: 'tags',
@@ -42,7 +32,7 @@ export default defineType({
           type: 'string',
         },
       ],
-      description: 'Tags associated with the Field.',
+      description: 'Tags associated with the Job.',
     }),
     defineField({
       name: 'image',
@@ -51,7 +41,7 @@ export default defineType({
       options: {
         hotspot: true,
       },
-      description: 'Logo related to the Field.',
+      description: 'Company Logo.',
     }),
     defineField({
       name: 'url',
